@@ -118,17 +118,19 @@ public class LoopView extends View {
     }
 
     private void initPaints() {
+        Typeface tf = Typeface.createFromAsset(getAssets(),
+        "fonts/HelveticaNeue.ttf");
         paintOuterText = new Paint();
         paintOuterText.setColor(0xffafafaf);
         paintOuterText.setAntiAlias(true);
-        paintOuterText.setTypeface(Typeface.MONOSPACE);
+        paintOuterText.setTypeface(tf);
         paintOuterText.setTextSize(textSize);
 
         paintCenterText = new Paint();
         paintCenterText.setColor(0xff000000);
         paintCenterText.setAntiAlias(true);
         paintCenterText.setTextScaleX(scaleX);
-        paintCenterText.setTypeface(Typeface.MONOSPACE);
+        paintCenterText.setTypeface(tf);
         paintCenterText.setTextSize(textSize);
 
         paintIndicator = new Paint();
