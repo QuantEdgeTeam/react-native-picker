@@ -114,11 +114,11 @@ public class LoopView extends View {
         totalScrollY = 0;
         initPosition = -1;
 
-        initPaints();
+        initPaints(context);
     }
 
-    private void initPaints() {
-        Typeface tf = Typeface.createFromAsset(getAssets(),
+    private void initPaints(Context context) {
+        Typeface tf = Typeface.createFromAsset(context.getAssets(),
         "fonts/HelveticaNeue.ttf");
         paintOuterText = new Paint();
         paintOuterText.setColor(0xffafafaf);
